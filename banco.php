@@ -3,33 +3,33 @@
 
 $dados = [
     [
-        "Nome" => "Thiago",
-        "Idade" => 30,
-        "Estado" => "MG",
+        "nome" => "Thiago",
+        "idade" => 30,
+        "estado" => "MG",
     ],
 
     [
-        "Nome" => "Thaís",
-        "Idade" => 15,
-        "Estado" => "SP",   
+        "nome" => "Thaís",
+        "idade" => 15,
+        "estado" => "SP",   
     ],
 
     [
-        "Nome" => "Roberto",
-        "Idade" => 10,
-        "Estado" => "RJ",   
+        "nome" => "Roberto",
+        "idade" => 10,
+        "estado" => "RJ",   
     ],
 
     [
-        "Nome" => "Vanessa",
-        "Idade" => 22,
-        "Estado" => "SP",   
+        "nome" => "Vanessa",
+        "idade" => 22,
+        "estado" => "SP",   
     ],
 
     [
-        "Nome" => "Junior",
-        "Idade" => 40,
-        "Estado" => "BA",   
+        "nome" => "Junior",
+        "idade" => 40,
+        "estado" => "BA",   
     ],
 ];
 

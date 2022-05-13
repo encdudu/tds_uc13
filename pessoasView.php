@@ -8,8 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <title>Document</title>
     </head>
 
@@ -24,7 +23,7 @@
         </thead>
 
             <tbody>
-                <?php foreach ($item as $dadosClientes) { ?>
+                <?php foreach ($dadosClientes as $item ) { ?>
                 <tr>
                     <td><?php echo $item["nome"]; ?> </td>
                     <td><?php echo $item["idade"]; ?> </td>

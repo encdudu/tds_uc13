@@ -1,9 +1,9 @@
 <?php
 //arquivo pessoasModel
 
-include "banco.php";
 
 function pegarDados() {
+    require_once "banco.php";
     return $dados;
 }
 
