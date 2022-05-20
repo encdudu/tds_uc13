@@ -1,8 +1,14 @@
 <?php
+    require_once "../model/user_model.php";
 
-    echo "CHEGOU NO USER_CONTROLLER";
-    echo "<pre>";
-    print_r($_POST);
-    echo "</pre>";
+    $nome = $_POST["nome"];
+    $endereco = $_POST["endereco"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
+    $confSenha = $_POST["confSenha"];
+
+    $userModel = new UserModel(); //new cria(instancia) o objeto
+    $userModel -> create($nome, $endereco, $email, $senha); // -> chamando a função create
+
 
 ?>

@@ -13,7 +13,7 @@
         Endereço: <input type="text" name="endereco" id="endereco"/><br>
         Email: <input type="text" name="email" id="email"/><br>
         Senha: <input type="password" name="senha" id="senha"/><br>
-        Confirmar Senha: <input type="password" name="conf_senha" id="conf_senha"/><br>
+        Confirmar Senha: <input type="password" name="confSenha" id="confSenha"/><br>
         <input type="submit" value="Cadastrar"/>
     </form>
 </body>
