@@ -8,7 +8,7 @@
     $confSenha = $_POST["confSenha"];
 
     $userModel = new UserModel(); //new cria(instancia) o objeto
-    $userModel -> create($nome, $endereco, $email, $senha); // -> chamando a função create
+    $userModel -> create($nome, $email, $senha, $endereco); // -> chamando a função create
 
 
 ?>
