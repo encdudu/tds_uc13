@@ -4,15 +4,15 @@
 
 class UserModel {
 
-    public function create($nome, $email, $senha, $endereco) {
+    public function create($name, $email, $address, $password) {
         $db = new Database();
         $con = $db->connect();
-        //$sql = "INSERT INTO USER (nome, endereco, email, senha) VALUES(:nome, :endereco, :email, :senha)";
+        //$sql = "INSERT INTO USER (name, address, email, password) VALUES(:name, :address, :email, :password)";
         //$result = $con->execute($sql);
 
-        $sql = "INSERT INTO USER (name, email, password, address) VALUES (:nome, :email, :senha, :endereco)"; //: coloca " " e torna tudo dentro tipo uma string
+        $sql = "INSERT INTO user (name, email, address, password) VALUES (:name, :email, :address, :password)"; //: coloca " " e torna tudo dentro tipo uma string
         $stmt = $con->prepare($sql);
-        $result = $stmt->execute(['nome'=>$nome, 'email'=>$email, 'senha'=>sha1($senha), 'endereco'=>$endereco]); //nome entre aspas deve ser o mesmo nome que está nos VALUES
+        $result = $stmt->execute(['name'=>$name, 'email'=>$email, 'address'=>$address, 'password'=>sha1($password)]); //name entre aspas deve ser o mesmo name que está nos VALUES
     }
 
     public function delete() {

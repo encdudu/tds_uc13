@@ -1,14 +1,14 @@
 <?php
     require_once "../model/user_model.php";
 
-    $nome = $_POST["nome"];
-    $endereco = $_POST["endereco"];
+    $name = $_POST["name"];
     $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $address = $_POST["address"];
+    $password = $_POST["password"];
     $confSenha = $_POST["confSenha"];
 
     $userModel = new UserModel(); //new cria(instancia) o objeto
-    $userModel -> create($nome, $email, $senha, $endereco); // -> chamando a função create
+    $userModel -> create($name, $email, $address, $password); // -> chamando a função create
 
 
 ?>
