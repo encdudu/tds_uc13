@@ -1,5 +1,5 @@
 <?php
-    require_once "../model/login_model-exercicio.php";
+    require_once "../model/login_model.php";
     
     $email = $_POST["email"];
     $password = $_POST["password"];

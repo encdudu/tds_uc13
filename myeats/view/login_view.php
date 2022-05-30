@@ -1,10 +1,17 @@
-email > input email
-senha > input senha
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
 
-botao logar 
-
-controller.php recebe os dados do login
-$_POST para pegar os campos
-
-login_model.php > função chamada login(email, senha) e se ususário existir, retornar TRUE
-echo usuario logado 
+<body>
+    <form method="post" action="../controller/login_controller.php">
+        Email: <input type="text" name="email" id="email"/><br>
+        Senha: <input type="password" name="password" id="password"/><br>
+        <input type="submit" value="Cadastrar"/>
+    </form>
+</body>
+</html>
