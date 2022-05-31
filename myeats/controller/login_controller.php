@@ -12,7 +12,16 @@
     }
 
     $loginModel = new loginModel(); //new cria(instancia) o objeto
-    $loginModel -> login($email, $password); // -> chamando a função create
+    $passwordCripto = sha1($password);
+    $resultado = $loginModel -> login($email, $passwordCripto); // -> chamando a função login
+
+    if ($resultado == true) {
+        session_start();
+        $_SESSION["logado"] = true;
+        header("Location: ../view/home-myeats.php");
+    } else {
+        echo "Usuário ou senha inválido";
+    }
 
 
 ?>
