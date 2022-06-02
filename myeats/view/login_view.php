@@ -1,3 +1,9 @@
+<?php
+
+    require_once "../util/checkSession.php";
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,10 +14,12 @@
 </head>
 
 <body>
-    <form method="post" action="../controller/login_controller.php">
+    <form method="post" action="../controller/login_controller.php?acao=login">
         Email: <input type="text" name="email" id="email"/><br>
         Senha: <input type="password" name="password" id="password"/><br>
-        <input type="submit" value="Cadastrar"/>
+        <input type="submit" value="Login"/>
     </form>
+    <br>
+    <a href="http://localhost/tds_uc13/myeats/view/user_create_view.php" target="_blank">Novo Cadastro</a>
 </body>
 </html>
