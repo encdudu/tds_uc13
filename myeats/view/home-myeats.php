@@ -13,7 +13,7 @@
     <title>Home - MyEats</title>
     <script type="text/javascript">
         function logout(){
-            window.location = "http://localhost/tds_uc13/myeats/controller/login_controller.php?acao=logout";
+            window.location = "http://localhost:8080/tds_uc13/myeats/controller/login_controller.php?acao=logout";
         }
     </script>
 </head>

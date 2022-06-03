@@ -13,18 +13,30 @@ class UserModel {
         $sql = "INSERT INTO user (name, email, address, password) VALUES (:name, :email, :address, :password)"; //: coloca " " e torna tudo dentro tipo uma string
         $stmt = $con->prepare($sql);
         $result = $stmt->execute(['name'=>$name, 'email'=>$email, 'address'=>$address, 'password'=>sha1($password)]); //name entre aspas deve ser o mesmo name que está nos VALUES
+
+        return  $result;
+
     }
 
     public function delete() {
-        echo "delete";
+        $db = new Database();
+        $con = $db->connect();
+        //$sql = "DELETE user WHERE (:name, :email, :address, :password)"; //: coloca " " e torna tudo dentro tipo uma string
+
     }
 
     public function update() {
-        echo "update";
+        $db = new Database();
+        $con = $db->connect();
     }
 
     public function findAll() {
-        echo "findAll";
+        $db = new Database();
+        $con = $db->connect();
+        $sql = "SELECT id, name, email, address FROM user";
+        $stmt = $con->prepare($sql);
+        $result = $stmt->execute();
+        return $stmt->fetchAll();
     }
 }
 ?>

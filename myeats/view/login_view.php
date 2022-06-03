@@ -1,9 +1,3 @@
-<?php
-
-    require_once "../util/checkSession.php";
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,6 +14,6 @@
         <input type="submit" value="Login"/>
     </form>
     <br>
-    <a href="http://localhost/tds_uc13/myeats/view/user_create_view.php" target="_blank">Novo Cadastro</a>
+    <a href="http://localhost:8080/tds_uc13/myeats/view/user_create_view.php" target="_blank">Novo Cadastro</a>
 </body>
 </html>
