@@ -18,10 +18,13 @@ class UserModel {
 
     }
 
-    public function delete() {
+    public function deletar($id) {
         $db = new Database();
         $con = $db->connect();
-        //$sql = "DELETE user WHERE (:name, :email, :address, :password)"; //: coloca " " e torna tudo dentro tipo uma string
+        $sql = "DELETE FROM USER WHERE id = :id"; //: coloca " " e torna tudo dentro tipo uma string
+        $stmt = $con->prepare($sql); // projete o sql, coloca aspas em tudo
+        $result = $stmt->execute(['id' => $id]);
+        return $result;
 
     }
 

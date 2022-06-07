@@ -51,7 +51,7 @@
     
     
         if ($password === $confSenha){
-            echo "login feito";
+            echo "Conta criada com sucesso";
     
         } else {
             echo "Senha incorreta, tente novamente"; 
@@ -60,6 +60,18 @@
         $userModel = new UserModel(); //new cria(instancia) o objeto
         $result = $userModel -> create($name, $email, $address, $password); // -> chamando a função create
     
-    }   
+    } else if ($acao == "deletar") {
+        $id = $_GET["id"];
+        $model = new UserModel(); //new cria(instancia) o objeto
+        $model -> deletar($id); //
+        $result = $model->deletar($id);
+
+        if($result == 1) {
+            $msg = ("Usuário deletado com sucesso!");
+        } else {
+            $msg = ("Erro ao deletar usuário");
+        }
+        header ("Location: http://localhost:8080/tds_uc13/myeats/view/user_list_view.php?msg=".$msg);
+    }  
 
 ?>

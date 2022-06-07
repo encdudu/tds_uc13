@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <form method="post" action="../controller/user_controller.php">
+    <form method="post" action="../controller/user_controller.php?acao=create">
         Nome: <input type="text" name="name" id="name"/> <br>
         Endereço: <input type="text" name="address" id="address"/><br>
         Email: <input type="text" name="email" id="email"/><br>

@@ -1,5 +1,12 @@
 <?php
     require_once "../controller/user_controller.php";
+
+    if(isset ($_GET["msg"])) {
+        $msg = $_GET["msg"];
+        echo "<script type='text/javascript'>";
+        echo "alert('".$msg."')";
+        echo "</script>";
+    }
 ?>
 
 
@@ -10,6 +17,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="text/javascript">
+        function deletar(id) {
+            if (confirm("Tem certeza que deseja remover esse registro?")) {
+                url = "http://localhost:8080/tds_uc13/myeats/controller/user_controller.php?acao=deletar&id="+id;
+                window.location = url;
+            }
+        }
+    </script>
 </head>
 <body>
     <h2>Lista de usuários</h2>
@@ -38,7 +53,7 @@
                 echo "<td>".$item["name"]."</td>";
                 echo "<td>".$item["email"]."</td>";
                 echo "<td>".$item["address"]."</td>";
-                echo "<td><a href='#' onclick = delete(".$item["id"].")>X</a></td>";
+                echo "<td><a href='#' onclick = deletar(".$item["id"].")>X</a></td>";
                 echo "<tr>";
             }
 
