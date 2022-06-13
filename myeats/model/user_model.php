@@ -28,9 +28,12 @@ class UserModel {
 
     }
 
-    public function update() {
+    public function update($id, $name, $email, $address) {
         $db = new Database();
         $con = $db->connect();
+        $sql = "UPDATE user set name = :name, email = :email, address = :address WHERE id = :id";
+        $stmt = $con -> prepare($sql); 
+        $result = $stmt -> execute([':name' => $name, ':email' => $email, ':address' => $address, 'id' => $id  ]); 
     }
 
     public function findAll() {
@@ -41,5 +44,21 @@ class UserModel {
         $result = $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function findById($id) {
+        $db = new Database();
+        $con = $db->connect();
+        $sql = "SELECT id, name, email, address FROM user WHERE id = :id";
+        $stmt = $con->prepare($sql);
+        $result = $stmt->execute(['id'=>$id]); //=> é um array associativo
+
+        //$dados['id'] = 10;
+        //$dados = array('id' => 10);
+        //$dados = ['id' => 10];
+        
+        return $stmt->fetchAll();
+    }
 }
 ?>
+
+

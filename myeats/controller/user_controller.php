@@ -67,11 +67,24 @@
         $result = $model->deletar($id);
 
         if($result == 1) {
-            $msg = ("Usuário deletado com sucesso!");
+            $data['msg'] = ("Usuário deletado com sucesso!");
+            $data['code'] = 0;
         } else {
-            $msg = ("Erro ao deletar usuário");
+            $data['msg'] = ("Erro ao deletar usuário!");
+            $data['code'] = 1;
         }
-        header ("Location: http://localhost:8080/tds_uc13/myeats/view/user_list_view.php?msg=".$msg);
-    }  
+
+        echo json_encode($data);
+    } 
+
+    else if($acao == "update"){
+        $model = new UserModel();
+        $id = $_POST['id'];
+        $name = $_POST['name'];
+        $address = $_POST['address'];
+        $email = $_POST['email'];
+        $result = $model -> update($id, $name, $email, $address);
+
+    }
 
 ?>
