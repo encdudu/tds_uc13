@@ -17,6 +17,14 @@
             echo "Campo Matricula não preenchido";
         }
 
+        /*if (isset($_POST['horario']) || !empty($_POST['horario'])){ //isset -> checa se o indice(name) do array existe
+            $tipo = $_POST['horario'];
+        }
+         
+        else{
+            echo "Campo Hora não preenchido";
+        } */
+        
 
         if (isset($_POST['tipo']) || !empty($_POST['tipo'])){ //isset -> checa se o indice(name) do array existe
             $tipo = $_POST['tipo'];

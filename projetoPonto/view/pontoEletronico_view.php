@@ -27,7 +27,9 @@
 
                     <div class="campos">
                         <label for="" class="subtitulos">Horário</label>
-                        <input type="text" name="horario" id="horario" placeholder="Pegar automático"/>
+                        <div class="horario">
+                            <span id="horaAqui"></span>
+                        </div>               
                     </div>
 
                     <div class="campos">
@@ -40,11 +42,40 @@
                             <option value="4">Saída Tarde</option>
                         </select>
                     </div>
-                    <input class="btn" type="submit" value="REGISTRAR"/>
-                </form>    
+                    <input class="btn" type="submit" value="REGISTRAR" onclick="funcaoSucesso()"/>
+                </form> 
+                
+                <h2 class="msgSucesso" id="msgCerta">
+
+                </h2>
             </div>
         </div>
 
     </div>
 </body>
+<script>
+
+function funcaoSucesso() {
+    var msgCerta = document.write("Registro enviado com sucesso!");
+    document.getElementById("horaAqui").innerHTML = msgCerta;
+}
+
+
+function funcaoAlerta() {
+    window.alert("Ponto Registrado com sucesso!")
+}
+
+
+function exibe_data_hora(){
+        var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var date = today.getDate()+ '/'+(today.getMonth()+1)+'/'+today.getFullYear();
+        var dateTime = time+' '+date;
+        document.getElementById("horaAqui").innerHTML = dateTime;
+    }
+
+    setInterval(() => {
+           exibe_data_hora(); 
+        }, 500);
+</script>
 </html>

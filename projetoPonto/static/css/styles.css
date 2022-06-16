@@ -50,7 +50,7 @@
     width: 30%;
 } 
 
-.campos input {
+.campos input, .horario {
     border: 1px solid white;
     background-color: transparent;
     border-radius: 5px;
@@ -59,6 +59,11 @@
     padding-left: 10px;
     padding: 10px;
 }
+
+.horario {
+    text-align: left;
+}
+
 
 .campos input::placeholder {
     color: #8079b4;
@@ -103,4 +108,11 @@
 .btn:hover {
     background-color: #ca7348;
     transition: 1s ease;
+}
+
+.msgSucesso {
+    color: #5adb64;
+    text-align: center;
+    padding-top: 30px;
+    display: block;
 }
