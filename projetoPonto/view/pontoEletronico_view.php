@@ -42,11 +42,8 @@
                             <option value="4">Saída Tarde</option>
                         </select>
                     </div>
-                    <input class="btn" type="submit" value="REGISTRAR" onclick="funcaoSucesso()"/>
-                </form> 
-                
-                <h2 class="msgSucesso" id="msgCerta">
-
+                    <input class="btn" type="submit" value="REGISTRAR" onclick="alerta()"/>
+                </form>               
                 </h2>
             </div>
         </div>
@@ -54,17 +51,6 @@
     </div>
 </body>
 <script>
-
-function funcaoSucesso() {
-    var msgCerta = document.write("Registro enviado com sucesso!");
-    document.getElementById("horaAqui").innerHTML = msgCerta;
-}
-
-
-function funcaoAlerta() {
-    window.alert("Ponto Registrado com sucesso!")
-}
-
 
 function exibe_data_hora(){
         var today = new Date();
@@ -77,5 +63,9 @@ function exibe_data_hora(){
     setInterval(() => {
            exibe_data_hora(); 
         }, 500);
+
+function alerta() {
+    window.alert('Registro enviado com sucesso!')
+}
 </script>
 </html>
